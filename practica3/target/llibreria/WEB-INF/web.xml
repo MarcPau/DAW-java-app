@@ -1,0 +1,47 @@
+<web-app xmlns="http://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://jakarta.ee/xml/ns/jakartaee
+                             http://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!-- Configuración de la página por defecto -->
+    <welcome-file-list>
+        <welcome-file>llibreria.jsp</welcome-file>
+    </welcome-file-list>
+
+<servlet>
+    <servlet-name>Consulta</servlet-name>
+    <servlet-class>com.web.consulta</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>Consulta</servlet-name>
+    <url-pattern>/consulta</url-pattern>
+</servlet-mapping>
+
+<servlet>
+        <servlet-name>Insertar</servlet-name>
+        <jsp-file>/insertar.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Insertar</servlet-name>
+        <url-pattern>/insertar</url-pattern>
+    </servlet-mapping>
+
+     <servlet>
+        <servlet-name>Eliminar</servlet-name>
+        <jsp-file>/eliminar.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Eliminar</servlet-name>
+        <url-pattern>/eliminar</url-pattern>
+    </servlet-mapping>
+
+     <servlet>
+        <servlet-name>Modificar</servlet-name>
+        <jsp-file>/modificar.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Modificar</servlet-name>
+        <url-pattern>/modificar</url-pattern>
+    </servlet-mapping>
+</web-app>
