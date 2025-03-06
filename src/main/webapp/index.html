@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Libros</title>
+</head>
+<body>
+    <h1>Gestión de Libros</h1>
+
+    <!-- Formulario para insertar un libro -->
+    <h2>Insertar Libro</h2>
+    <form action="insertar" method="post">
+        Título: <input type="text" name="titol" required><br>
+        ISBN: <input type="text" name="isbn" required><br>
+        Año de Publicación: <input type="number" name="any_publicacio" required><br>
+        ID de Editorial: <input type="number" name="id_editorial" required><br>
+        <input type="submit" value="Insertar">
+    </form>
+
+    <!-- Formulario para modificar un libro -->
+    <h2>Modificar Libro</h2>
+    <form action="modificar" method="post">
+        ID del Libro: <input type="number" name="id" required><br>
+        Nuevo Título: <input type="text" name="titol"><br>
+        Nuevo ISBN: <input type="text" name="isbn"><br>
+        Nuevo Año de Publicación: <input type="number" name="any_publicacio"><br>
+        Nuevo ID de Editorial: <input type="number" name="id_editorial"><br>
+        <input type="submit" value="Modificar">
+    </form>
+
+    <!-- Formulario para eliminar un libro -->
+    <h2>Eliminar Libro</h2>
+    <form action="eliminar" method="post">
+        ID del Libro: <input type="number" name="id" required><br>
+        <input type="submit" value="Eliminar">
+    </form>
+
+    <!-- Enlace para consultar libros -->
+    <h2>Consultar Libros</h2>
+    <form action="consulta" method="get">
+        <input type="submit" value="Consultar Libros">
+    </form>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<web-app xmlns="http://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://jakarta.ee/xml/ns/jakartaee
+                             http://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    /**
+     * @welcome-file-list
+     * Configura la página de bienvenida que se mostrará al acceder al contexto raíz de la aplicación.
+     * <ul>
+     * <li><b>llibreria.jsp:</b> Archivo JSP que actúa como página principal.</li>
+     * </ul>
+     */
+    <welcome-file-list>
+        <welcome-file>llibreria.jsp</welcome-file>
+    </welcome-file-list>
+
+    /**
+     * @servlet Consulta
+     * Configura el servlet para manejar consultas relacionadas con la base de datos.
+     * <ul>
+     * <li><b>Nombre del servlet:</b> Consulta</li>
+     * <li><b>Clase:</b> com.web.consulta</li>
+     * <li><b>URL:</b> /consulta</li>
+     * </ul>
+     */
+    <servlet>
+        <servlet-name>Consulta</servlet-name>
+        <servlet-class>com.web.consulta</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Consulta</servlet-name>
+        <url-pattern>/consulta</url-pattern>
+    </servlet-mapping>
+
+    /**
+     * @servlet Insertar
+     * Configura un servlet basado en JSP para insertar nuevos datos.
+     * <ul>
+     * <li><b>Nombre del servlet:</b> Insertar</li>
+     * <li><b>Archivo JSP:</b> insertar.jsp</li>
+     * <li><b>URL:</b> /insertar</li>
+     * </ul>
+     */
+    <servlet>
+        <servlet-name>Insertar</servlet-name>
+        <jsp-file>/insertar.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Insertar</servlet-name>
+        <url-pattern>/insertar</url-pattern>
+    </servlet-mapping>
+
+    /**
+     * @servlet Eliminar
+     * Configura un servlet basado en JSP para eliminar datos.
+     * <ul>
+     * <li><b>Nombre del servlet:</b> Eliminar</li>
+     * <li><b>Archivo JSP:</b> eliminar.jsp</li>
+     * <li><b>URL:</b> /eliminar</li>
+     * </ul>
+     */
+    <servlet>
+        <servlet-name>Eliminar</servlet-name>
+        <jsp-file>/eliminar.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Eliminar</servlet-name>
+        <url-pattern>/eliminar</url-pattern>
+    </servlet-mapping>
+
+    /**
+     * @servlet Modificar
+     * Configura un servlet basado en JSP para modificar datos existentes.
+     * <ul>
+     * <li><b>Nombre del servlet:</b> Modificar</li>
+     * <li><b>Archivo JSP:</b> modificar.jsp</li>
+     * <li><b>URL:</b> /modificar</li>
+     * </ul>
+     */
+    <servlet>
+        <servlet-name>Modificar</servlet-name>
+        <jsp-file>/modificar.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Modificar</servlet-name>
+        <url-pattern>/modificar</url-pattern>
+    </servlet-mapping>
+
+</web-app>
